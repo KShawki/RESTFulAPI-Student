@@ -10,7 +10,7 @@ export const users = [
   }
 ]; 
 
-export const getUser = (req, res) => {
+export const getUsers = (req, res) => {
   res.send(users);
 };
 

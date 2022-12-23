@@ -13,11 +13,12 @@ app.listen(PORT, () => {
 })
 
 app.get("/", (req, res) => {
-  res.send(`Hello, Everyone!`); 
+  res.sendFile("./index.html"); 
 }); 
 
-app.use('/students', studentsRouter);
-app.use('/courses', coursesRouter);
+app.use('/students', studentRouter);
+app.use('/courses', courseRouter);
+app.use('/users', userRouter); 
 
 
 
