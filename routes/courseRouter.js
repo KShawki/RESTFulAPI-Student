@@ -1,9 +1,9 @@
 import express from 'express'; 
-import { createCourse, getCourse } from '../controller/course';
+import { createCourse, getCourse } from '../controller/course.js';
 
-const router = express.Router; 
+const courseRouter = express.Router; 
 
-router.use('/create', createCourse); 
-router.use('/list', getCourse); 
+courseRouter.use('/create', createCourse); 
+courseRouter.use('/list', getCourse); 
 
-export default router; 
+export default courseRouter; 

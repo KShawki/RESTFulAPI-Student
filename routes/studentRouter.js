@@ -1,7 +1,10 @@
 import express from "express";
+import {listOfCourses, joinCourses, listOfStudent } from "../controller/student.js";
 
-const router = express.Router(); 
+const studentRouter = express.Router(); 
 
-router.use("/listOfCourses", list)
+studentRouter.use("/listOfCourses", listOfCourses);
+studentRouter.use("/listOfStudent", listOfStudent); 
+studentRouter.use("/join", joinCourses); 
 
-export default router; 
+export default studentRouter; 
