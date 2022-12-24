@@ -1,13 +1,13 @@
 import express from "express";
-import Course from './course.js';
-import users from './users.js';
+import { Course } from './course.js';
+import { users } from './users.js';
 
 const router = express.Router(); 
 
 export const CoursesEnrollment = [
   {
     CrsName: "Cloud",
-    StudID : 20206018
+    StudID : "20206018"
   }
 ]
 
