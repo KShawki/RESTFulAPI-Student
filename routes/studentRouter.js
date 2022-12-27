@@ -3,8 +3,14 @@ import {listOfCourses, joinCourses, listOfStudent } from "../controller/student.
 
 const studentRouter = express.Router(); 
 
-studentRouter.use("/listOfCourses", listOfCourses);
-studentRouter.use("/listOfStudent", listOfStudent); 
-studentRouter.use("/join", joinCourses); 
+studentRouter.get('/', (req, res) => {
+  res.send(`Hello, From Students`)
+});
+
+
+
+studentRouter.get("/listOfCourses", listOfCourses);
+studentRouter.get("/listOfStudent", listOfStudent); 
+studentRouter.post("/join", joinCourses); 
 
 export default studentRouter; 

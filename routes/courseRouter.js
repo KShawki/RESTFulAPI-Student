@@ -3,7 +3,7 @@ import { createCourse, getCourse } from '../controller/course.js';
 
 const courseRouter = express.Router(); 
 
-courseRouter.use('/create', createCourse); 
-courseRouter.use('/list', getCourse); 
+courseRouter.get('/create', createCourse); 
+courseRouter.get('/list', getCourse); 
 
 export default courseRouter; 
