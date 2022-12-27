@@ -9,6 +9,10 @@ import courseRouter from './routes/courseRouter.js';
 const app = express(); 
 const PORT = 3000; 
 
+// Middleware
+app.use(express.json()); 
+app.use(express.urlencoded()); 
+
 app.listen(PORT, () => {
   console.log(`Server Running on port http://localhost:${PORT} ..`); 
 })

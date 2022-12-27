@@ -17,7 +17,6 @@ export const getUsers = (req, res) => {
 export const createUser = (req, res) => {
   let user = req.body;
   users.push({ ...user, ID: hash });
-  res.send(`User with name ${user.name} was added!\n`);
-  console.log(req.body);
+  res.send(users)
 };
 
